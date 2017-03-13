@@ -25,7 +25,7 @@ String.prototype.myTrim = function () {
 String.prototype.toCharArray = function () {
     var char = [];
     for (var i = 0; i < this.length - 1; i++) {
-        char[i]=this.charAt(i);
+        char[i] = this.charAt(i);
     }
     return char;
 }
@@ -40,8 +40,8 @@ String.prototype.reverse = function () {
         arrTemp[j] = temp;
     }
 
-    for(var i=0,j=this.length-1;i<j;i++,j--){
-        swap(str,i,j);
+    for (var i = 0, j = this.length - 1; i < j; i++, j--) {
+        swap(str, i, j);
     }
     return str.join("");
 }
