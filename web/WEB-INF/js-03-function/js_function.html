@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+</head>
+<body>
+<script type="text/javascript">
+    /**
+     * js中的函数演示。
+     * 函数：就是一个功能的封装体。
+     * 定义功能通常需要两个明确。
+     * 1.功能的结果。
+     * 2.功能实现的参与运算的未知内容。（形参）
+     *
+     *
+     * js中的定义函数的格式。
+     * 通过制定的关键字来定义。
+     * function函数名(参数列表){
+     *      函数体;
+     *      return 返回值;//如果没有具体的返回值，return语句可以删略不写。
+     * }
+     */
+
+    function demo() {
+        alert("demo run!!!");
+    }
+
+//    demo();
+
+    function add(x, y) {
+        return x+y;
+    }
+    var sum=add(8,9);
+    alert("sum="+sum);
+</script>
+</body>
+</html>

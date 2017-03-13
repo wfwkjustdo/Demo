@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_string</title>
+    <script type="text/javascript" src="../jsUtil/jsUtil.js"></script>
+    <script type="text/javascript" src="../jsUtil/StringUtil.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        /**
+         * 需求：
+         * 既然trim方法是用来操作字符串，可不可以像字符串已有的方法一样，
+         * 将该方法也定义到字符串对象中呢？直接用字符串对象调用就欧了。
+         */
+
+        /**
+         * 这里就可以使用一个该字符串的原型属性来完成：
+         * 原型：就是该对象的一个描述，该描述中如果添加了新功能。
+         * 那么该对象都会具备这些新功能。
+         * 而prototype就可以获取到这个原型对象。
+         * 通过prototype就可以对对象的功能进行扩张。
+         */
+
+        /**
+         * 需求：
+         * 想要给string对象添加一个可以去除字符串两端空格的新功能。
+         * 就可以使用原型属性来完成。
+         */
+        //给string的原型添加一个功能。注意：给对象添加新功能直接使用“对象.新内容”即可。
+        /*放到了工具类中jsUtil/StringUtil.js
+            String.prototype.myTrim = function () {
+            var start, end;
+            start = 0;
+            end = this.length - 1;
+            while (start <= end && this.charAt(start) == " ") {
+                start++;
+            }
+            while (start <= end && this.charAt(end) == " ") {
+                end--;
+            }
+            return this.substring(start, end + 1);
+        }*/
+
+        alert("-"+"   ab   cd   ".myTrim()+"-");
+    </script>
+
+
+
+
+</body>
+</html>
